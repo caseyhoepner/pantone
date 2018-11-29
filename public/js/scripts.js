@@ -1,38 +1,33 @@
-let randomColors;
-
-const generateColors = () => {
-  randomColors = [
-    getRandomColor(),
-    getRandomColor(),
-    getRandomColor(),
-    getRandomColor(),
-    getRandomColor(),
-  ]
-
-  $('.color1').css('background-color', randomColors[0])
-  $('.color2').css('background-color', randomColors[1])
-  $('.color3').css('background-color', randomColors[2])
-  $('.color4').css('background-color', randomColors[3])
-  $('.color5').css('background-color', randomColors[4])
-};
-
 $(window).on("load", generateColors);
 $('.new-palette-btn').on('click', generateColors);
+$('.color').on('click', toggleLock);
+$('.save-palette-btn').on('click', savePalette);
 
-const getRandomColor = () => {
-  return "#" +Math.random().toString(16).slice(2, 8)
+function generateColors() {
+  for(i = 1; i < 6; i++) {
+    if(!$(`.color${i}`).hasClass('disabled')) {
+      $(`.color${i}`).css('background-color', getRandomColor())
+    }
+  }
 };
 
-const savePalette = () => {
+function getRandomColor() {
+  return "#" + Math.random().toString(16).slice(2, 8);
+};
+
+function savePalette() {
   const newPalette = {
     name: $('.palette-name').val(),
-    color1: randomColors[0],
-    color2: randomColors[1],
-    color3: randomColors[2],
-    color4: randomColors[3],
-    color5: randomColors[4]
+    color1: $('.color1').css('background-color'),
+    color2: $('.color2').css('background-color'),
+    color3: $('.color3').css('background-color'),
+    color4: $('.color4').css('background-color'),
+    color5: $('.color5').css('background-color')
   }
   console.log(newPalette);
-}
+};
 
-$('.save-palette-btn').on('click', savePalette);
+function toggleLock() {
+  $(event.target).children().toggleClass('locked');
+  $(event.target).toggleClass('disabled');
+};
