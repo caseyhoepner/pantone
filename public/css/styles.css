@@ -8,29 +8,6 @@ body {
   height: 500px;
 }
 
-.color {
-}
-
-.color1 {
-  background-color: maroon;
-}
-
-.color2 {
-  background-color: peru;
-}
-
-.color3 {
-  background-color: gold;
-}
-
-.color4 {
-  background-color: green;
-}
-
-.color5 {
-  background-color: navy;
-}
-
 .small-color {
   height: 15px;
   width: 100px;
