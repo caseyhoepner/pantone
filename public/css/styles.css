@@ -10,6 +10,12 @@ body {
   text-align: center;
 }
 
+.color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .colors {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -17,14 +23,21 @@ body {
 }
 
 .new-palette-btn {
-  margin: auto;
   padding: 10px 100px;
   text-transform: uppercase;
+  margin: 30px;
 }
 
-.small-color {
-  height: 15px;
-  width: 100px;
-  background-color: black;
-  display: inline-block;
+.lock {
+  background-image: url('../assets/lock.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}
+
+.unlock {
+  background-image: url('../assets/lock.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
 }
