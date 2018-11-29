@@ -1,11 +1,25 @@
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: grey;
+}
+
+.title {
+  margin: 30px auto;
+  width: 500px;
+  text-align: center;
 }
 
 .colors {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  height: 500px;
+  height: 400px;
+}
+
+.new-palette-btn {
+  margin: auto;
+  padding: 10px 100px;
+  text-transform: uppercase;
 }
 
 .small-color {
