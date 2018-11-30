@@ -8,6 +8,7 @@ body {
   margin: 30px auto;
   width: 500px;
   text-align: center;
+  font-size: 2rem;
 }
 
 .color {
@@ -28,7 +29,7 @@ body {
   margin: 30px;
 }
 
-.lock {
+.unlocked {
   background-image: url('../assets/unlock.svg');
   background-size: cover;
   width: 50px;
