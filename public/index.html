@@ -12,21 +12,23 @@
         <h1 class='title'>Palette Picker</h1>
         <p>Press the spacebar to generate color schemes!</p>
       </section>
-      
-      <section class='save-project-container border'>
-        <div class='heading-and-input'>
-          <h3 class='subheading'>Create a New Project:</h3>
-          <input class='project-name'type="text" placeholder="New project name">
-        </div>
-        <button class='save-project-btn'>Save Project</button>
+      <section class='box-container'>
+        <section class='save-project-container box border'>
+          <div class='heading-and-input'>
+            <h3 class='subheading'>Create a New Project:</h3>
+            <input class='project-name'type="text" placeholder="New project name">
+          </div>
+          <button class='save-project-btn'>Save Project</button>
+        </section>
+        <section class='save-palette-container box border'>
+          <div class='heading-and-input'>
+            <h3 class='subheading'>Save this Palette:</h3>
+            <input class='palette-name' type="text" name="palette-name" placeholder="Palette name">
+          </div>
+          <button class='save-palette-btn'>Save Palette</button>
+        </section>
       </section>
-      <section class='save-palette-container border'>
-        <div class='heading-and-input'>
-          <h3 class='subheading'>Save this Palette:</h3>
-          <input class='palette-name' type="text" name="palette-name" placeholder="Palette name">
-        </div>
-        <button class='save-palette-btn'>Save Palette</button>
-      </section>
+      <section class='projects'></section>
     </section>
     <section class='colors'>
       <div class='color color1'>
@@ -45,9 +47,7 @@
         <div class='unlocked'></div>
       </div>
     </section>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/scripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/scripts.js"></script>
   </body>
 </html>

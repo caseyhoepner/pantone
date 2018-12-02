@@ -25,9 +25,25 @@ const saveProject = async () => {
     }
   })
   const data = await response.json();
+  // console.log(data.id)
+  fetchProject(data.id)
 }
 
+const fetchProject = async (id) => {
+  const url = `/api/v1/projects/${id}`
+  const response = await fetch(url)
+  const data = await response.json()
+  const projectName = data[0].name;
+  displayProject(projectName)
+}
 
+const displayProject = async (projectName) => {
+  const projects = $('.projects');
+  const newProject = document.createElement('div');
+    newProject.innerHTML = 
+      `<p>${projectName}</p>`;
+    projects.append(newProject);
+}
 
 const savePalette = async () => {
   const newPalette = {

@@ -48,9 +48,15 @@ button {
   letter-spacing: 2px
 }
 
+.box-container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin-top: 50px;
+}
+
 .save-project-container {
-  width: 40%;
-  margin: 50px 0;
+  margin-right: 20px;
 }
 
 .border {
@@ -59,6 +65,9 @@ button {
 }
 
 .save-palette-container {
+}
+
+.box {
   width: 40%;
 }
 
