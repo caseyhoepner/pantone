@@ -1,26 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   color: grey;
-}
-
-.title {
-  margin: 30px auto;
-  width: 500px;
-  text-align: center;
-  font-size: 2rem;
-}
-
-.color {
   display: flex;
-  justify-content: center;
+}
+
+.text-side {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.colors {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  height: 400px;
+.title {
+  font-size: 3rem;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.subheading {
+  margin-bottom: 10px;
+}
+
+.heading-and-input {
+  margin: 20px 10% 15px;
+}
+
+input {
+  height: 30px;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  border: none;
+  background-color: grey;
+  color: white;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  height: 40px;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px
+}
+
+.save-project-container {
+  width: 40%;
+  margin: 50px 0;
+}
+
+.border {
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.save-palette-container {
+  width: 40%;
 }
 
 .new-palette-btn {
@@ -29,16 +68,29 @@ body {
   margin: 30px;
 }
 
+.color {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.colors {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  height: 100vh;
+  width: 50%;
+  float: right;
+}
+
 .unlocked {
   background-image: url('../assets/unlock.svg');
   background-size: cover;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
 }
 
 .locked {
   background-image: url('../assets/lock.svg');
   background-size: cover;
-  width: 50px;
-  height: 50px;
 }

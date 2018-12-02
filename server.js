@@ -5,12 +5,10 @@ const environment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
 
-app.use( bodyParser.json() );
+app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.set('port', process.env.PORT || 3000);
-
-// delete palette
 
 app.get('/api/v1/projects', (request, response) => {
   database('projects').select()
@@ -79,7 +77,7 @@ app.post('/api/v1/projects/:project_id/palettes', (request, response) => {
     }
   }
 
-  database('palettes').insert(palette, 'id')
+  database('palettes').insert({ ...palette, project_id } 'id')
     .then(palette => {
       response.status(201).json({ id: palette[0] })
     })
@@ -103,6 +101,17 @@ app.get('/api/v1/projects/:project_id/palettes/:palette_id', (request, response)
       response.status(500).json({ error });
     });
 });
+
+app.delete('/api/v1/projects/:project_id/palettes/:id', (request, response) => {
+  const { id } = request.params
+
+  database('palettes').where(id, 'id').del()
+    .then(() => response.send({ message: 'Palette ${id} has been deleted.' }))
+
+    .catch(error => {
+      response.status(500).json({ error });
+    });
+})
 
 app.listen(app.get('port'), () => {
   console.log(`PalettePicker is running on ${app.get('port')}.`);
