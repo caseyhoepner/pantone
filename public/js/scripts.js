@@ -43,6 +43,12 @@ const displayProject = async (project) => {
     projects.append(newProject);
 }
 
+
+
+
+
+
+//sad code
 const savePalette = async () => {
   const newPalette = {
     name: $('.palette-name').val(),
@@ -62,6 +68,13 @@ const savePalette = async () => {
   })
   const palettes = await response.json();
 }
+//end sad code
+
+
+
+
+
+
 
 const fetchPalette = async () => {
   const url = `/api/v1/projects/${projectId}/palettes`
