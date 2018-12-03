@@ -1,4 +1,4 @@
-let projectId = 1
+let projectId = 20
 
 const generateColors = () => {
   for(i = 1; i < 6; i++) {
@@ -24,24 +24,22 @@ const saveProject = async () => {
       'Content-Type': 'application/json',
     }
   })
-  const data = await response.json();
-  // console.log(data.id)
-  fetchProject(data.id)
+  const project = await response.json();
+  fetchProject(project.id)
 }
 
 const fetchProject = async (id) => {
   const url = `/api/v1/projects/${id}`
   const response = await fetch(url)
-  const data = await response.json()
-  const projectName = data[0].name;
-  displayProject(projectName)
+  const project = await response.json()
+  displayProject(project[0])
 }
 
-const displayProject = async (projectName) => {
+const displayProject = async (project) => {
   const projects = $('.projects');
   const newProject = document.createElement('div');
     newProject.innerHTML = 
-      `<p>${projectName}</p>`;
+      `<p class='project-${project.id}'>${project.name}</p>`;
     projects.append(newProject);
 }
 
@@ -62,7 +60,15 @@ const savePalette = async () => {
       'Content-Type': 'application/json',
     }
   })
-  const data = await response.json();
+  const palettes = await response.json();
+}
+
+const fetchPalette = async () => {
+  const url = `/api/v1/projects/${projectId}/palettes`
+  const response = await fetch(url)
+  const palette = await response.json()
+  console.log(palette)
+  // displayPalettes(palette)
 }
 
 const toggleLock = () => {

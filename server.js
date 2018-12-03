@@ -68,8 +68,9 @@ app.get('/api/v1/projects/:project_id/palettes', (request, response) => {
 
 app.post('/api/v1/projects/:project_id/palettes', (request, response) => {
   const palette = request.body;
+  const project_id = request.params.id;
 
-  for (let requiredParameter of ['hex1', 'hex2', 'hex3', 'hex4', 'hex5', 'project_id' ]) {
+  for (let requiredParameter of ['name', 'hex1', 'hex2', 'hex3', 'hex4', 'hex5' ]) {
     if (!palette[requiredParameter]) {
       return response
         .status(422)
@@ -77,7 +78,7 @@ app.post('/api/v1/projects/:project_id/palettes', (request, response) => {
     }
   }
 
-  database('palettes').insert({ ...palette, project_id } 'id')
+  database('palettes').insert(palette, 'id')
     .then(palette => {
       response.status(201).json({ id: palette[0] })
     })
