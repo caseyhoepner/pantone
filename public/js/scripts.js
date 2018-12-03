@@ -12,6 +12,14 @@ const getRandomColor = () => {
   return "#" + Math.random().toString(16).slice(2, 8);
 };
 
+
+
+
+
+
+
+
+//happy code
 const saveProject = async () => {
   const newProject = {
     name: $('.project-name').val(),
@@ -42,13 +50,14 @@ const displayProject = async (project) => {
       `<p class='project-${project.id}'>${project.name}</p>`;
     projects.append(newProject);
 }
+//end happy code
 
 
 
 
 
 
-//sad code
+
 const savePalette = async () => {
   const newPalette = {
     name: $('.palette-name').val(),
@@ -68,13 +77,6 @@ const savePalette = async () => {
   })
   const palettes = await response.json();
 }
-//end sad code
-
-
-
-
-
-
 
 const fetchPalette = async () => {
   const url = `/api/v1/projects/${projectId}/palettes`
