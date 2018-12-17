@@ -68,7 +68,7 @@ app.get('/api/v1/projects/:project_id/palettes', (request, response) => {
 
 app.post('/api/v1/projects/:project_id/palettes', (request, response) => {
   const palette = request.body;
-  const project_id = request.params.id;
+  const project_id = request.params;
 
   for (let requiredParameter of ['name', 'hex1', 'hex2', 'hex3', 'hex4', 'hex5' ]) {
     if (!palette[requiredParameter]) {

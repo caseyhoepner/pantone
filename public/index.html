@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Palette Picker</title>
+    <title>Pantone</title>
      <link rel = "stylesheet" type = "text/css" href = "./css/reset.css" />
      <link rel = "stylesheet" type = "text/css" href = "./css/styles.css" />
      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -9,26 +9,34 @@
   <body>
     <section class='text-side'>
       <section class='header'>
-        <h1 class='title'>Palette Picker</h1>
-        <p>Press the spacebar to generate color schemes!</p>
+        <img class='pantone' src="./assets/pantone.svg">
+        <div>
+          <h1 class='title'>Pantone</h1>
+          <p>Press the spacebar to generate color schemes!</p>
+        </div>
       </section>
       <section class='box-container'>
-        <section class='save-project-container box border'>
-          <div class='heading-and-input'>
-            <h3 class='subheading'>Create a New Project:</h3>
+        <div class='action-container'>
+          <h3 class='subheading'>Create a New Project:</h3>
+          <div class='inner-container'>
             <input class='project-name'type="text" placeholder="New project name">
+            <button class='save-project-btn'>Save Project</button>
           </div>
-          <button class='save-project-btn'>Save Project</button>
-        </section>
-        <section class='save-palette-container box border'>
-          <div class='heading-and-input'>
-            <h3 class='subheading'>Save this Palette:</h3>
+        </div>
+        <div class='action-container'>
+          <h3 class='subheading'>Save this Palette:</h3>
+          <div class='inner-container'>
             <input class='palette-name' type="text" name="palette-name" placeholder="Palette name">
+            <button class='save-palette-btn'>Save Palette</button>
           </div>
-          <button class='save-palette-btn'>Save Palette</button>
-        </section>
+        </div>
+        <div class='favorites-btn'>
+          <img class='heart'  src="./assets/like.svg">
+          <p class='view-palettes'>Saved</p>
+          <p class='view-palettes'>Palettes</p>
+        </div>
       </section>
-      <section class='projects'></section>
+      <!-- <section class='projects hide'></section> -->
     </section>
     <section class='colors'>
       <div class='color color1'>
