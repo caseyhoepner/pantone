@@ -1,3 +1,3 @@
 # Pantone
 
-<img width="1438" alt="screen shot 2018-12-16 at 20 02 52" src="https://user-images.githubusercontent.com/36767936/50064357-f382a800-016d-11e9-88f4-969648eda6f3.png">
+<img width="1437" alt="screen shot 2018-12-16 at 20 15 25" src="https://user-images.githubusercontent.com/36767936/50064612-5b85be00-016f-11e9-93f2-a50d14a28269.png">
