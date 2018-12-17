@@ -2,7 +2,7 @@
 If ever you're working on a project and you lack inspiration for the color scheme, look no further than Pantone for help. At a click of the space bar, you are presented with 5 colors to choose from. Like some of the colors, but not others? Lock the ones you like, and press the space bar again to replace the ones you don't like with fresh ones. Working on multiple projects at once? With Pantone you can save countless projects and unlimited palettes to each of those projects!
 
 ### Tech Stack:
-Javascript, CSS, Express, Node.js
+Javascript, CSS, Express, knex, and PostgreSQL
 
 ### Project Specifications:
 [Spec](http://frontend.turing.io/projects/palette-picker.html)
