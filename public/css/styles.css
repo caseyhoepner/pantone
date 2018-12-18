@@ -77,6 +77,7 @@ button {
 
 button:hover {
   background-color: #3B3B3B;
+  cursor: pointer;
 }
 
 .favorites-btn {
@@ -85,6 +86,10 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin-right: 30px;
+}
+
+.favorites-btn:hover {
+  cursor: pointer;
 }
 
 .view-palettes {
@@ -110,14 +115,18 @@ button:hover {
 .unlocked {
   background-image: url('../assets/unlock.svg');
   background-size: cover;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin-left: 20px;
 }
 
 .locked {
   background-image: url('../assets/lock.svg');
   background-size: cover;
+}
+
+.projects {
+  border-top: 1px solid #3B3B3B;
 }
 
 .hide {

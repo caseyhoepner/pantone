@@ -76,14 +76,21 @@ const toggleLock = () => {
   $(event.target).toggleClass('disabled');
 };
 
-document.body.onkeyup = function(e) {
+document.body.onkeyup = (e) => {
   if (e.keyCode == 32) {
     generateColors();
   }
 };
+
+const toggleViews = () => {
+  $('.projects').toggleClass('hide');
+  $('.colors').toggleClass('hide');
+  $('.action-container').toggleClass('hide');
+}
 
 $(window).on("load", generateColors);
 $('.new-palette-btn').on('click', generateColors);
 $('.color').on('click', toggleLock);
 $('.save-project-btn').on('click', saveProject);
 $('.save-palette-btn').on('click', savePalette);
+$('.favorites-btn').on('click', toggleViews);
