@@ -53,6 +53,15 @@ header {
   display: flex;
 }
 
+#projects-list {
+  height: 34px;
+  border: 1px solid #000;
+}
+
+#projects-list:focus {
+  outline: none;
+}
+
 .subheading {
   font-size: 1.2rem;
   padding-bottom: 7px;
@@ -80,22 +89,25 @@ button:hover {
   cursor: pointer;
 }
 
+.save-palette-btn {
+  border-radius: 10px;
+  margin-left: 15px;
+}
+
 .favorites-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-right: 30px;
+  width: 50px;
 }
 
 .favorites-btn:hover {
   cursor: pointer;
 }
 
-.view-palettes {
-}
-
-.heart {
+.icon {
   width: 30px;
   height: 30px;
 }
@@ -125,11 +137,58 @@ button:hover {
   background-size: cover;
 }
 
-.projects {
+.project {
+  font-size: 2em;
   border-top: 1px solid #3B3B3B;
+  padding: 40px;
+}
+
+.colors-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.colors-container:hover {
+  cursor: pointer;
+}
+
+.palettes-container {
+  display: flex;
+  margin: 30px 0 20px 0;
+}
+
+.palette-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.palette-color {
+  height: 30px;
+  width: 30px;
+}
+
+.trash-icon {
+  margin-top: 13px;
+  height: 30px;
+  width: 30px;
+}
+
+.trash-icon:hover {
+  cursor: pointer;
 }
 
 .hide {
   display: none;
 }
 
+.disabled {
+  background-color: grey;
+}
+
+.disabled:hover {
+  background-color: grey;
+  cursor: auto;
+}

@@ -20,30 +20,30 @@
           <h3 class='subheading'>Create a New Project:</h3>
           <div class='inner-container'>
             <input class='project-name'type="text" placeholder="New project name">
-            <button class='save-project-btn'>Save Project</button>
+            <button class='save-project-btn disabled' disabled>Save Project</button>
           </div>
         </div>
         <div class='action-container'>
           <h3 class='subheading'>Save this Palette:</h3>
+
           <div class='inner-container'>
-            <input class='palette-name' type="text" name="palette-name" placeholder="Palette name">
-            <button class='save-palette-btn'>Save Palette</button>
+            <select id='projects-list'>
+              <option value="0">Choose a Project</option>
+            </select>
+            <button class='save-palette-btn disabled' disabled>Save Palette</button>
           </div>
         </div>
         <div class='favorites-btn'>
-          <img class='heart'  src="./assets/like.svg">
+          <img class='icon' src="./assets/like.svg">
+          <img class='icon hide' src="./assets/arrow.svg">
           <p class='view-palettes'>Saved</p>
           <p class='view-palettes'>Palettes</p>
+          <p class='view-palettes hide'>Go</p>
+          <p class='view-palettes hide'>Back</p>
         </div>
       </section>
     </section>
     <section class='projects hide'>
-      
-
-
-
-
-
     </section>
     <section class='colors'>
       <div class='color color1'>
